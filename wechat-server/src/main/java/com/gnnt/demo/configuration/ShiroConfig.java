@@ -33,6 +33,13 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/testData", "anon");
         filterChainDefinitionMap.put("/getOpenId", "anon");
         filterChainDefinitionMap.put("/frimAdd", "anon");
+        filterChainDefinitionMap.put("/countFrim", "anon");
+        filterChainDefinitionMap.put("/eventAdd", "anon");
+        filterChainDefinitionMap.put("/eventAddByType", "anon");
+        filterChainDefinitionMap.put("/eventUpdateByStatus", "anon");
+        filterChainDefinitionMap.put("/eventUpdateByContext", "anon");
+        filterChainDefinitionMap.put("/findEventListByOpenId", "anon");
+        filterChainDefinitionMap.put("/findEventListByParentId", "anon");
 
         //配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了
 

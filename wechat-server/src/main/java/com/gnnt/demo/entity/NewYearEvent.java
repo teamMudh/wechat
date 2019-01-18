@@ -1,6 +1,7 @@
 package com.gnnt.demo.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 /**
@@ -12,11 +13,11 @@ import javax.persistence.*;
 public class NewYearEvent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-	private long parentId;
+	private Long parentId;
 
-	/**0 发起者，1，参与者，3 接收者*/
+	/**0 发起者，1，参与者，2 接收者*/
 	private Integer type;
 
 	private String openId;
@@ -27,24 +28,32 @@ public class NewYearEvent {
 
 	private String avatarUrl;
 
+	// 0邀请他人 1 发送祝福  2 等待其他人加入 3. 待发送 ，4.结束
 	private Integer status;
+
+
+	private String parentName;
+
+	private Date  createTime;
 
 
     private String content;
 
-	public long getId() {
+	private Long contFrim;
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public long getParentId() {
+	public Long getParentId() {
 		return parentId;
 	}
 
-	public void setParentId(long parentId) {
+	public void setParentId(Long parentId) {
 		this.parentId = parentId;
 	}
 
@@ -102,5 +111,29 @@ public class NewYearEvent {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public Long getContFrim() {
+		return contFrim;
+	}
+
+	public void setContFrim(Long contFrim) {
+		this.contFrim = contFrim;
+	}
+
+	public String getParentName() {
+		return parentName;
+	}
+
+	public void setParentName(String parentName) {
+		this.parentName = parentName;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 }
